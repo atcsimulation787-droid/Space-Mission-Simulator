@@ -18,7 +18,7 @@ time.sleep(1)
 print("Type one: \n 1. Moon \n 2. Mars ")
 dest = input("Input: ")
 
-if dest == "1": #DA MOON "‾" <- Use for images
+if dest == "1": #THE MOOOON "‾" <- Use for images
     title("Destination Selected: The Moon!", "")
     radiatelvl = "Low"
     time.sleep(1)
