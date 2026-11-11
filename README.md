@@ -1,2 +1,5 @@
-"# Space-Mission-Simulator" 
-"# Space-Mission-Simulator" 
+"----------------------------------------"
+"        SPACE MISSION SIMULATOR"
+"----------------------------------------"
+"My first python project!"
+"It's still a work in progress..."
