@@ -330,6 +330,20 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         time.sleep(1)
         print("Where do you search first?")
         print("Options: \n 1. Outdoor shed \n 2. Storage room \n 3. Emergency storage")
+        options = input("Input: ")
+        if input == "1":
+            print("You put on your spacesuit and go outside, hurrying towards the shed.")
+            time.sleep(2)
+            print("You struggle with opening the door, to find no oxygen filter in the small space. -10 minutes left.")
+            oMins -= 10
+            oTime = "50 minutes"
+        elif input == "2":
+            print("You rush into the storage room.")
+        elif input == "3":
+            print("You rush into the emergency storage.")
+        else:
+            print("There goes the oxygen. The End.")
+            onedeath = true
     else:
         print("")
     if onedeath == False:
