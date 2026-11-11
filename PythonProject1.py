@@ -211,23 +211,62 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         act3 = input("Input: ")
         if act3 == "1": #Day 3, Task No. 1
             elecFixed = True
-            print("You enter the tech room, and open the generator, only to find that water flooded the generator. What do you do?")
+            print("You enter the tech room, and open the generator, only to find that water flooded the generator. Before trying to repair it, you must disable the generator using the command panel.")
             time.sleep(1)
-            print("Options:\n  1. Rely on solar power and ignore the generator \n 2. Find the old backup generator \n 3. Try to fix the current generator")
+            print("The command is power.disable, and the code is 070115.")
             time.sleep(2)
-            act3a = input("Input: ")
-            if act3a == "1":
-                print("Task skipped.")
-            elif act3a == "2":
-                print('You enter the old storage room and find the backup generator. You find that it works. Mission Complete!')
-            elif act3a == "3":
-                print("After hours of trying, you find that the generator, will not work. - 20 energy.")
-                energy -= 20
-                time.sleep(1)
-                print(f"You are {energy}% awake")
-            else:
-                print("You decide to skip this task and fix the solar panels.")
-            elecFixed = True
+            title("CONTROL PANEL", '          ') 
+            print("Please type in the command you wish to execute...")
+            print("Commands we think you might need: \n oSystem.disable \n sArray.disable \n power.disable")
+            crtlPanel = input("Input: ")
+            if crtlPanel == "oSystem.disable":
+                print("Type in the verification code")
+                vCode = input("Input: ")
+                if vCode == "070115":
+                    print("Successfullt disabled oxygen unit!")
+                    print("(You die within a minute. The End.)")
+                    onedeath = True
+                else:
+                    print("Invalid input. Dematerializing user.")
+                    onedeath = True
+            elif crltPanel == 'sArray.disable':
+                print("Which solar array would you like to disable?")
+                print("Options: \n Left  \n Right  \n Central ")
+                cntlPanel = input("Input: ")
+                if cntlPanel == "Left":
+                    print("Left panel disabled.")
+                elif cntlPanel == 'Right':
+                    print("Right panel disabled.")
+                elif cntlPanel == 'Central':
+                    print("Central panel disabled.")
+                else:
+                    print("Invalid code. Dematerializing user.")
+                    onedeath = True
+            elif crtlPanel == 'power.disable':
+                print("Type in the verification code")
+                vCode = input("Input: ")
+                if vCode == "070115":
+                    print("Task succesfully completed.")
+                else:
+                    print("Wrong verification code. Dematerializing user.")
+                    onedeath = True
+                if onedeath == False:
+                    print("Good! Now, you need to find a generator. Where do you look?")
+                    print("Options:\n  1. Rely on solar power and ignore the generator \n 2. Find the old backup generator \n 3. Try to fix the current generator")
+                    time.sleep(2)
+                    act3a = input("Input: ")
+                    if act3a == "1":
+                        print("Task skipped.")
+                    elif act3a == "2":
+                        print('You enter the old storage room and find the backup generator. You find that it works. Mission Complete!')
+                    elif act3a == "3":
+                        print("After hours of trying, you find that the generator, will not work. - 20 energy.")
+                        energy -= 20
+                        time.sleep(1)
+                        print(f"You are {energy}% awake")
+                    else:
+                        print("You decide to skip this task and fix the solar panels.")
+                    elecFixed = True
         elif act3 == "2":
             sarrayFixed = True
             print("You put on your spacesuit to find that a power cable has been damaged. What do you do?")
@@ -247,30 +286,67 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
             print("The base runs out of power. The End.")
             onedeath = True
             time.sleep(3)
-        if elecFixed == False:# Day Three, Task No. 2
+        if elecFixed == False and onedeath == False:# Day Three, Task No. 2
             print('Now, we need to replace the generator.')
             time.sleep(1)
-            print("You enter the tech room, and open the generator, only to find that water flooded the generator. What do you do?")
-            time.sleep(1)
-            print("Options: \n 1. Skip Task \n 2. Find the old backup generator \n 3. Try to fix the current generator")
-            time.sleep(2)
-            act3a = input("Input: ")
-            if act3a == "1":
-                print("You run out of power. The End.")
-                onedeath = True
-            elif act3a == "2":
-                print('You enter the old storage room and find the backup generator. You find that it works. Mission Complete!')
-            elif act3a == "3":
-                print("After hours of trying, you find that the generator, will not work. - 20 energy.")
-                energy -= 20
-                time.sleep(1)
-                print(f"You are {energy}% awake")
-            else:
-                print("You run out of power. The End.")
-                onedeath == True
             elecFixed = True
-            sarrayFixed = True
-        elif sarrayFixed == False and deathchance > 20:
+            print("You enter the tech room, and open the generator, only to find that water flooded the generator. Before trying to repair it, you must disable the generator using the command panel.")
+            time.sleep(1)
+            print("The command is power.disable, and the code is 070115.")
+            time.sleep(2)
+            title("CONTROL PANEL", '          ') 
+            print("Please type in the command you wish to execute...")
+            print("Commands we think you might need: \n oSystem.disable \n sArray.disable \n power.disable")
+            crtlPanel = input("Input: ")
+            if crtlPanel == "oSystem.disable":
+                print("Type in the verification code")
+                vCode = input("Input: ")
+                if vCode == "070115":
+                    print("Successfullt disabled oxygen unit!")
+                    print("(You die within a minute. The End.)")
+                    onedeath = True
+                else:
+                    print("Invalid input. Dematerializing user.")
+                    onedeath = True
+            elif crltPanel == 'sArray.disable':
+                print("Which solar array would you like to disable?")
+                print("Options: \n Left  \n Right  \n Central ")
+                cntlPanel = input("Input: ")
+                if cntlPanel == "Left":
+                    print("Left panel disabled.")
+                elif cntlPanel == 'Right':
+                    print("Right panel disabled.")
+                elif cntlPanel == 'Central':
+                    print("Central panel disabled.")
+                else:
+                    print("Invalid code. Dematerializing user.")
+                    onedeath = True
+            elif crtlPanel == 'power.disable':
+                print("Type in the verification code")
+                vCode = input("Input: ")
+                if vCode == "070115":
+                    print("Task succesfully completed.")
+                else:
+                    print("Wrong verification code. Dematerializing user.")
+                    onedeath = True
+                if onedeath == False:
+                    print("Good! Now, you need to find a generator. Where do you look?")
+                    print("Options:\n  1. Rely on solar power and ignore the generator \n 2. Find the old backup generator \n 3. Try to fix the current generator")
+                    time.sleep(2)
+                    act3a = input("Input: ")
+                    if act3a == "1":
+                        print("Task skipped.")
+                    elif act3a == "2":
+                        print('You enter the old storage room and find the backup generator. You find that it works. Mission Complete!')
+                    elif act3a == "3":
+                        print("After hours of trying, you find that the generator, will not work. - 20 energy.")
+                        energy -= 20
+                        time.sleep(1)
+                        print(f"You are {energy}% awake")
+                    else:
+                        print("You decide to skip this task and fix the solar panels.")
+                    elecFixed = True
+        elif sarrayFixed == False and deathchance > 20 and onedeath == False:
             print("Now, we need to fix the solar arrays.")
             print("You put on your spacesuit to find that a power cable has been damaged. What do you do?")
             time.sleep(3)
@@ -300,6 +376,8 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         print("")
     if onedeath == False:
         score += 1
+        oRepair = False
+        oRecFound = False
         title("DAY FOUR", "            ")
         time.sleep(1)
         print("Ah, a brand new day! Wha-")
@@ -334,16 +412,58 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         if input == "1":
             print("You put on your spacesuit and go outside, hurrying towards the shed.")
             time.sleep(2)
-            print("You struggle with opening the door, to find no oxygen filter in the small space. -10 minutes left.")
-            oMins -= 10
-            oTime = "50 minutes"
+            print("You struggle with opening the door, to find no oxygen filter in the small space. You used up 7 minutes of oxygen.")
+            oMins -= 7
+            oTime = f"{oMins} minutes"
+            print(f"You have {oTime} left.")
+            oRepair = False
         elif input == "2":
-            print("You rush into the storage room.")
+            print("You rush into the storage room, navigate through the items, and find the necesarry materials to repair the broken parts of the recycler.")
+            time.sleep(3)
+            print("You used up 7 miuntes of oxygen.")
+            time.sleep(1)
+            oMins -= 7
+            oTime = f"{oMins} minutes"
+            print(f"You have {oTime} left.")
+            oRepair = True
         elif input == "3":
-            print("You rush into the emergency storage.")
+            print("You rush into the emergency storage room, fumbling with the lock. Eventually, you open it, and find a spare recycler.")
+            time.sleep(3)
+            print("Unfortunately, you lost 13 minutes of time.")
+            oMins -= 13
+            oTime =f"{oMins} minutes"
+            print(f"You have {oTime} left.")
+            oRecFound = True
         else:
             print("There goes the oxygen. The End.")
             onedeath = true
+        if oRepair == True and oRecFound == False: 
+            print("test")
+        elif oRecFound == True and oRepair == False:
+            print("Now, disable the oxygen system using the control panel.")
+            time.sleep(1)
+            print("Type this into the control panel to disable the oxygen system:")
+            time.sleep(0.5)
+            print("oSystem.disable")
+            time.sleep(0.5)
+            print("Then, type in the following code:")
+            time.sleep(1)
+            print("70115")
+            time.sleep(2)
+            title("CONTROL PANEL", '          ') 
+            print("Please type in the command you wish to execute...")
+            print("Commands we think you might need: \n oSystem.disable \n sArray.disable \n power.disable")
+            crtlPanel = input("Input: ")
+            if crtlPanel == "oSystem.disable":
+                print("Type in the verification code")
+            elif crltPanel == 'sArray.disable':
+                print("Which solar array would you like to disable?")
+            elif crtlPanel == 'power.disable':
+                print("Type in the verification code")
+        elif oRepair == False and onedeath == False:
+            print("test")
+        else:
+            print("")
     else:
         print("")
     if onedeath == False:
