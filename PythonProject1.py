@@ -197,7 +197,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         time.sleep(3)
         print("Hello! A few duties await you today...")
         time.sleep(1)
-        title("TASKS FOR TODAY:")
+        title("TASKS FOR TODAY: ", "          ")
         time.sleep(1)
         print("\n 1. Fix the generator \n 2. Repair the left solar array")
         radiatelvl = "Moderate"
@@ -230,7 +230,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                         break
                     else:
                         print("Invalid input.")
-                elif crltPanel == 'sArray.disable':
+                elif crtlPanel == 'sArray.disable':
                     print("Which solar array would you like to disable?")
                     print("Options: \n Left  \n Right  \n Central ")
                     cntlPanel = input("Input: ")
@@ -290,7 +290,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                             break
                         else:
                             print("Invalid input.")
-                    elif crltPanel == 'sArray.disable':
+                    elif crtlPanel == 'sArray.disable':
                         print("Which solar array would you like to disable?")
                         print("Options: \n Left  \n Right  \n Central ")
                         cntlPanel = input("Input: ")
@@ -344,7 +344,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                         break
                     else:
                         print("Invalid input.")
-                elif crltPanel == 'sArray.disable':
+                elif crtlPanel == 'sArray.disable':
                     print("Which solar array would you like to disable?")
                     print("Options: \n Left  \n Right  \n Central ")
                     cntlPanel = input("Input: ")
@@ -481,8 +481,8 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         time.sleep(1)
         print("Where do you search first?")
         print("Options: \n 1. Outdoor shed \n 2. Storage room \n 3. Emergency storage")
-        options = input("Input: ")
-        if input == "1":
+        act4 = input("Input: ")
+        if act4 == "1":
             print("You put on your spacesuit and go outside, hurrying towards the shed.")
             time.sleep(2)
             print("You struggle with opening the door, to find no oxygen filter in the small space. You used up 7 minutes of oxygen.")
@@ -490,7 +490,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
             oTime = f"{oMins} minutes"
             print(f"You have {oTime} left.")
             oRepair = False
-        elif input == "2":
+        elif act4 == "2":
             print("You rush into the storage room, navigate through the items, and find the necesarry materials to repair the broken parts of the recycler.")
             time.sleep(3)
             print("You used up 7 miuntes of oxygen.")
@@ -499,7 +499,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
             oTime = f"{oMins} minutes"
             print(f"You have {oTime} left.")
             oRepair = True
-        elif input == "3":
+        elif act4 == "3":
             print("You rush into the emergency storage room, fumbling with the lock. Eventually, you open it, and find a spare recycler.")
             time.sleep(3)
             print("Unfortunately, you lost 13 minutes of time.")
@@ -509,7 +509,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
             oRecFound = True
         else:
             print("There goes the oxygen. The End.")
-            onedeath = true
+            onedeath = True
         if oRepair == True and oRecFound == False: #Repairing the recycler
             print("You rush back into the room, ready to fix the recycler.")
             while True:
@@ -590,7 +590,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
     else:
         score += 1
     time.sleep(1)
-    title("GAME OVER")
+    title("GAME OVER", "            ")
     print(f"\n    DAYS SURVIVED: {score}        ")
     print(f"    Health = {health} \n    Hunger = {hunger} \n    Energy = {energy}")
 
