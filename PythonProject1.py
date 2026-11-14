@@ -580,7 +580,6 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                     oMins -= 1
             oTime = f"{oMins} minutes"
             print(f"You have {oTime} left.")
-            onedeath = True
             if onedeath == False:
                 time.sleep(1)
                 print("Now, you need to attach the new recycler on.")
