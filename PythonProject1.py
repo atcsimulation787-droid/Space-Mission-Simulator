@@ -9,10 +9,10 @@ def title(txt: str, spaces: str):
     print("------------------------------------")
 score = 0
 onedeath = False
-title("SPACE MISSION SIMULATOR", "        ")
-time.sleep(2)
-print("Choose a name for your spaceship...")
-ship_name = input("Name: ")
+title("SPACE MISSION SIMULATOR", "        ") #I ask that all contributors on GitHub use comments to mark what they added.
+time.sleep(2)                              #Also, keep this realistic. Make sure that everything scientifically makes sense.
+print("Choose a name for your spaceship...") #Thanks! *Also, sign off with your name on what you added.
+ship_name = input("Name: ")                 # - Atcsimulation787-droid
 print("Great! Where would you like to take your new ship to?")
 time.sleep(1)
 print("Type one: \n 1. Moon \n 2. Mars ")
@@ -514,7 +514,16 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
             print("You rush back into the room, ready to fix the recycler.")
             while True:
                 print("Take off the *left* tube.")
+                time.sleep(1)
                 print("Options: \n 1. Left Tube \n 2. Right Tube \n 3. Central Tube")
+                while True:
+                    act4a = input("Input: ")
+                    if act4a == '1':
+                        print('Good Job!')
+                        break
+                    else:
+                        print("Wrong tube. Try Again.")
+                print("")
         elif oRecFound == True and oRepair == False: #Installing the recycler
             print("Now, disable the oxygen system using the control panel.")
             time.sleep(1)
