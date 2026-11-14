@@ -1,18 +1,22 @@
 import time 
 import random 
 hunger = random.randint(60, 80)
-energy = random.randint(50, 75)
+energy = random.randint(65, 75)
 health = random.randint(85, 100)
+shipHealth = 1000
 def title(txt: str, spaces: str):
     print("------------------------------------")
     print(f"{spaces}{txt}")
+    print("------------------------------------")
+def subtitle(text: str, spaces: str):
+    print(f"{spaces}{text}                    ")
     print("------------------------------------")
 score = 0
 onedeath = False
 title("SPACE MISSION SIMULATOR", "        ") #I ask that all contributors on GitHub use comments to mark what they added.
 time.sleep(2)                              #Also, keep this realistic. Make sure that everything scientifically makes sense.
-print("Choose a name for your spaceship...") #Thanks! *Also, sign off with your name on what you added.
-ship_name = input("Name: ")                 # - Atcsimulation787-droid
+print("Choose a name for your spaceship...") #Also, sign off with your name on what you added.
+ship_name = input("Name: ")                 # Thanks! - Atcsimulation787-droid
 print("Great! Where would you like to take your new ship to?")
 time.sleep(1)
 print("Type one: \n 1. Moon \n 2. Mars ")
@@ -626,6 +630,100 @@ elif dest == "2": #MARS
     print("Keep an eye out for asteroids.")
     time.sleep(1)
     print("Upon arrival of Mars, you will recieve more information.") #Adding more here! - atcsimulation787-droid
+    time.sleep(1)
+    while True: 
+        title("WEEK ONE", '             ')
+        explLiv = False
+        explCrtl = False
+        explNav = False
+        time.sleep(3)
+        subtitle('Tutorial', '             ') #Mars Tutorial 1: Exploring the Spaceship
+        time.sleep(2)
+        print("Before you complete any tasks, you should get to know your spaceship.")
+        time.sleep(2)
+        print("Where would you like to go first?")
+        while True: 
+            print("Options: ")
+            if explLiv == False:
+                print(" 1. Living Quarters")
+            else:
+                print(" 1. Living Quarters (Explored)")
+            time.sleep(0.5)
+            if explCrtl == False:
+                print(" 2. Tech Room")
+            else:
+                print(' 2. Tech Room (Explored)')
+            time.sleep(0.5)
+            if explNav == False:
+                print(" 3. Navigation Room")
+            else:
+                print(' 3. Navigation Room (Explored)')
+            time.sleep(0.5)
+            if explLiv == True and explCrtl == True and explNav == True:
+                time.sleep(0.5)
+                print("All areas explored!")
+                break
+            elif explLiv == False or explCrtl == False or explNav == False:
+                tutorChoice = input("Input: ")
+            if tutorChoice == '1' and explLiv == False: #Mars Tutorial 1: Living Quarters
+                print('Heading to the living quarters...')
+                time.sleep(3)
+                print("The living quarters is where you'll spend a large amount of your trip at.")
+                time.sleep(2)
+                print('Here, you\'ll find the sleeping bunks, the observation deck, and the food closet.')
+                time.sleep(2)
+                print('The sleeping bunks come with a bed and a foldable table.')
+                time.sleep(1.5)
+                print('The observation deck consists of a large window, and supply drawers.')
+                time.sleep(2)
+                print('The food closet is where the meals are stored. It also has a rehydrator.')
+                time.sleep(3)
+                print("After looking around, you decide to eat lunch. Hunger restored!")
+                hunger = 100
+                print(f"You are {hunger}% full")
+                explLiv = True
+            elif tutorChoice == '2' and explCrtl == False: #Mars Tutorial 1: Control Room
+                print('Heading to the tech room...') 
+                time.sleep(3)
+                print('The tech room consists of the engine room, power room, and life support system.')
+                time.sleep(2.5)
+                print('The power room contains all the circuits, generators, etc.')
+                time.sleep(1)
+                print('The life support system consists of the temperature control and the oxygen recycling system.')
+                explCrtl = True
+            elif tutorChoice == '3' and explNav == False: #Mars Tutorial 1: Navigation Room
+                print('Heading to the navigation room...')
+                time.sleep(2)
+                print('Unlike other sections, the navigation room consists of only the navigation room.')
+                time.sleep(1)
+                print("Here, you will navigate the spaceship.")
+                time.sleep(1)
+                print("|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|")
+                print("|     ______________      _____________     |")
+                print("|    /  *           |    |             \    |")
+                print("|   |           *   |    |        *     |   |")
+                print("|   |     *         |    |        ______|   |")
+                print("|   |          *    |    |   *   /   _/ |   |")
+                print("|   |  *          * |    |       |  /  /|   |")
+                print("|   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾/‾‾‾‾\‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾   |")
+                print("|           ________|    |__________        |")
+                print("|          /        |    |          \       |")
+                print("|          |        |    |‾‾|       |       |")
+                print("|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|")
+                print("|___________________________________________|")
+                explNav = True
+            else:
+                print('That input was invalid. Try again. (You cannot explore a section that you have already explored.)')
+        print('After exploring the spaceship, you take a rest. Energy restored!')
+        time.sleep(1)
+        energy = 100
+        print(f'You are {energy}% energized')
+        time.sleep(5)
+        title("WEEK TWO", "           ")
+        time.sleep(0.5)
+        subtitle('Navigation Tutorial', '       ')
+
+        break
 else:
     print("You set off in your spaceship and crashed into an asteroid. The End.")
 time.sleep(3)
