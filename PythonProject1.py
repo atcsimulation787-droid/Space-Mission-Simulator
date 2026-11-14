@@ -625,7 +625,7 @@ elif dest == "2": #MARS
     time.sleep(2)
     print("Keep an eye out for asteroids.")
     time.sleep(1)
-    print("Upon arrival of Mars, you will recieve more information.")
+    print("Upon arrival of Mars, you will recieve more information.") #Adding more here! - atcsimulation787-droid
 else:
     print("You set off in your spaceship and crashed into an asteroid. The End.")
 time.sleep(3)
