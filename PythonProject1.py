@@ -17,13 +17,12 @@ print("Great! Where would you like to take your new ship to?")
 time.sleep(1)
 print("Type one: \n 1. Moon \n 2. Mars ")
 dest = input("Input: ")
-# We steal... THE MOOOOON!!!!!!
 if dest == "1": #THE MOOOON "‾" <- Use for images
     title("Destination Selected: The Moon!", "")
     radiatelvl = "Low"
     time.sleep(1)
     print("Preparing your spaceship...")
-    time.sleep(10)
+    time.sleep(7)
     print("Here are a few things you should know before arriving...")
     time.sleep(1)
     print("The Moon has a sixth of Earth's gravity. It'll take some time to get used to it.")
