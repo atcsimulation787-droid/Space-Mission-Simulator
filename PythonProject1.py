@@ -36,6 +36,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
     print("You have arrived at your destination.")
     time.sleep(1)
     title("DAY ONE", "             ")
+    subtitle('Introduction', '          ')
     print("What would you like to do first?")
     print("Options: \n 1. Explore the space base and get settled \n 2. Take a peek outside \n 3. Go take a ride on the lunar vehicle")
     act1 = input("Input: ")
@@ -160,6 +161,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
     if onedeath == False: #DAY TWO
         score += 1
         title("DAY TWO", "            ")
+        subtitle('Explore', '            ')
         print("Ah, a brand new day! What are you planning to do?")
         time.sleep(2)
         print("Options: \n 1. Take a rest \n 2. Use the telescope \n 3. Explore the gym")
@@ -197,6 +199,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         elecFixed = False
         sarrayFixed = False
         title("DAY THREE", "           ")
+        subtitle('Tasks', '              ')
         time.sleep(3)
         print("Hello! A few duties await you today...")
         time.sleep(1)
@@ -454,7 +457,8 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         score += 1
         oRepair = False
         oRecFound = False
-        title("DAY FOUR", "            ")
+        title("DAY FOUR", "            ") #Day Four: The Crisis
+        subtitle('Explore?', '             ')
         time.sleep(1)
         print("Ah, a brand new day! Wha-")
         time.sleep(2.5)
@@ -603,7 +607,8 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         print("")
     if onedeath == False:
         score += 1
-        title("THE FINAL DAY: DAY 5", "   ")
+        title("DAY 5", "              ")
+        subtitle('The Final Day', '        ')
     else:
         print("")
     if onedeath == True:
