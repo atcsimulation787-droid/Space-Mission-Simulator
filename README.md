@@ -14,3 +14,4 @@
 1. Add your GitHub username near what you added by commenting.
 2. Use comments to keep the code organized, mark the first task on the fourth day with #Day 4, Task 1.
 3. Try to keep this realistic and scientifically accurate. This isn't a sci-fi game.
+4. Ex. print("Day Three") #Day Three - atcsimulation787-droid
