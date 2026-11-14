@@ -637,7 +637,8 @@ elif dest == "2": #MARS
     print("Upon arrival of Mars, you will recieve more information.") #Adding more here! - atcsimulation787-droid
     time.sleep(1)
     while True: 
-        title("WEEK ONE", '             ')
+        title("WEEK ONE", '             ') 
+        subtitle('Introduction', '          ')
         explLiv = False
         explCrtl = False
         explNav = False
@@ -726,7 +727,7 @@ elif dest == "2": #MARS
         time.sleep(5)
         title("WEEK TWO", "           ")
         time.sleep(0.5)
-        subtitle('Navigation Tutorial', '       ')
+        subtitle('Navigation Tutorial', '       ') #To Be continued...
 
         break
 else:
