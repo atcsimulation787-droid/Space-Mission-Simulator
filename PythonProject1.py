@@ -523,7 +523,17 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                         break
                     else:
                         print("Wrong tube. Try Again.")
-                print("")
+                time.sleep(1)
+                print('Now, attach the *gray* tube.')
+                print('Options: \n 1. White Tube \n 2. Gray Tube \n 3. Black Tube')
+                act4b = input("Input: ")
+                if act4b == '2':
+                    print("Task Completed!")
+                    time.sleep(1)
+                    break
+                else:
+                    print("Try again.")
+                print("Now, empty the clear container.") #To be worked on...
         elif oRecFound == True and oRepair == False: #Installing the recycler
             print("Now, disable the oxygen system using the control panel.")
             time.sleep(1)
