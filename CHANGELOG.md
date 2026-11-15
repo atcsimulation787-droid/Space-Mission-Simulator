@@ -1,4 +1,6 @@
 # CHANGELOG:
+## Version 0.1.6
+- Started work on the tutorials for Mars.
 ## Version 0.1.5
 - Created introduction on Mars.
 - Have finished the majority of version alpha for Moon.
