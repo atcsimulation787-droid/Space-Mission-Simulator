@@ -652,12 +652,11 @@ elif dest == "2": #MARS
     time.sleep(1)
     while True: 
         title("WEEK ONE", '             ') 
-        subtitle('Introduction', '          ')
+        subtitle('Tutorial', '             ')
         explLiv = False
         explCrtl = False
         explNav = False
-        time.sleep(3)
-        subtitle('Tutorial', '             ') #Mars Tutorial 1: Exploring the Spaceship
+        time.sleep(3) #Mars Tutorial 1: Exploring the Spaceship
         time.sleep(2)
         print("Before you complete any tasks, you should get to know your spaceship.")
         time.sleep(2)
@@ -756,14 +755,14 @@ elif dest == "2": #MARS
         print('(Loading the navigation system...)')
         time.sleep(1)
         print('_________________________________________')
-        print(' Control >> Navigation >> Tutorial       ')
+        print(' Control >> Tutorials >> Navigation      ')
         print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
         time.sleep(1)
         print('What would you like to do?')
+        navcoords = False
+        navtraj = True
+        navcours = True
         while True:
-            navcoords = False
-            navtraj = True
-            navCours = True
             print('Commands:')
             if navcoords == False:
                 print(' 1. Check coordinates <- Use This!')
@@ -773,7 +772,7 @@ elif dest == "2": #MARS
                 print(' 2. Check trajectory <- Use This!')
             else:
                 print(' 2. Check trajectory')
-            if navCours == False:
+            if navcours == False:
                 print(' 3. Realign <- Use This!')
             else:
                 print(' 3. Realign')
@@ -781,7 +780,7 @@ elif dest == "2": #MARS
             if tutorNav == '1' and navcoords == False:
                 shipx = 1273
                 shipy = 538
-                shipx = 837
+                shipz = 837
                 print('Current coordinates: ')
                 time.sleep(1)
                 print(f'\nX: {shipx}')
@@ -790,7 +789,7 @@ elif dest == "2": #MARS
                 time.sleep(0.5)
                 print(f'Z: {shipz}')
                 time.sleep(1)
-                print('These are you coordinates relative to Earth.')
+                print('These are your coordinates relative to Earth.')
                 time.sleep(1)
                 print('Misalignment: None')
                 time.sleep(1)
@@ -798,11 +797,79 @@ elif dest == "2": #MARS
                 navcoords = True
                 navtraj = False
             elif tutorNav == '2' and navtraj == False:
-                print('Current path: ')
-            elif tutorNav == '3' and navcoords == False:
-                print('test')
+                print('Destination:  MARS')
+                time.sleep(1)
+                print('\nPlanned trajectory: 3.0°')
+                time.sleep(0.5)
+                currenttraj = 2.5
+                print(f'Current trajectory: {currenttraj}°')
+                time.sleep(1)
+                print('\nCourse deviation: Minor')
+                time.sleep(0.5)
+                print('Realignment may be required.')
+                time.sleep(1)
+                print('This shows the planned and current trajectory. To fix the course deviation, you will need to realign the ship.')
+                navtraj = True
+                navcours = False
+            elif tutorNav == '3' and navcours == False:
+                print('Planned route: Earth --> Mars')
+                time.sleep(1)
+                print('|‾‾‾‾‾‾‾‾‾‾‾‾‾‾/‾‾‾‾‾‾‾‾‾|')
+                print('|           |  |         |')
+                print('|   *          |         |')
+                print('|           |  |         |')
+                print('|           __/          |')
+                print('|          /  \       *  |')
+                print('|    *    /    \         |')
+                print('|         |    |         |')
+                print('|         |____|      *  |')
+                print('|__________|__|__________|')
+                time.sleep(2)
+                print('KEY')
+                print('- - - Planned Route')
+                time.sleep(0.5)
+                print('----- Current Route')
+                time.sleep(1)
+                print('You are 0.5° off course')
+                time.sleep(2)
+                print('Realign position: (Not Needed)')
+                time.sleep(0.5)
+                print('Realign trajectory: ')
+                time.sleep(0.5)
+                while True:
+                    print(' 1. Go left <-- Use This!')
+                    print(' 2. Go right')
+                    tutorNava = input('Input: ')
+                    if tutorNava == '1':
+                        print('How many degrees do you want to move left?')
+                        print('(We advise you go 0.5 degrees)')
+                        print('Follow advice?')
+                        print('Options: \n 1. Yes \n 2. No')
+                        tutornavB = input('Input: ')
+                        if tutornavB == '1':
+                            tutorNavb = 0.5
+                            currenttraj += tutorNavb
+                            print('Planned trajectory: 3.0°')
+                            print(f'Current trajectory: {currenttraj}°')
+                            navcoords = True
+                            navtraj = True
+                            navcours = True
+                            break
+                        else:
+                            print('To complete the tutorial, follow the advice.')
+                    elif tutorNava == '2':
+                        print('(To complete the tutorial, go left.)')
             else:
                 print('Invalid input. Follow the tutorial.')
+            if navcoords == True and navtraj == True and navcours == True:
+                break
+            else:
+                onedeath = False 
+            print('You finished the navigation tutorial!')
+            time.sleep(3)
+            title('WEEK THREE', '         ') #Mars - Week 3: Technology Tutorial 
+            subtitle('Technology Tutorial', '      ') # -atcsimulation787-droid
+
         break
 else:
     print("You set off in your spaceship and crashed into an asteroid. The End.")
