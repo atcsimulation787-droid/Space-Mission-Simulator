@@ -1,4 +1,4 @@
-# CHANGELOG:
+# Changelog for Space Mission Simulator:
 ## Version 0.1.6
 - Started work on the tutorials for Mars.
 ## Version 0.1.5
