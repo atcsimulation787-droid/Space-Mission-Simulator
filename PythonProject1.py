@@ -487,17 +487,9 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         print(f"You have {oTime} of oxygen left, use it wisely.")
         time.sleep(1)
         print("Where do you search first?")
-        print("Options: \n 1. Outdoor shed \n 2. Storage room \n 3. Emergency storage")
+        print("Options: \n 1. Storage room \n 2. Emergency storage")
         act4 = input("Input: ")
         if act4 == "1":
-            print("You put on your spacesuit and go outside, hurrying towards the shed.")
-            time.sleep(2)
-            print("You struggle with opening the door, to find no oxygen filter in the small space. You used up 7 minutes of oxygen.")
-            oMins -= 7
-            oTime = f"{oMins} minutes"
-            print(f"You have {oTime} left.")
-            oRepair = False
-        elif act4 == "2":
             print("You rush into the storage room, navigate through the items, and find the necesarry materials to repair the broken parts of the recycler.")
             time.sleep(3)
             print("You used up 7 miuntes of oxygen.")
@@ -506,7 +498,7 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
             oTime = f"{oMins} minutes"
             print(f"You have {oTime} left.")
             oRepair = True
-        elif act4 == "3":
+        elif act4 == "2":
             print("You rush into the emergency storage room, fumbling with the lock. Eventually, you open it, and find a spare recycler.")
             time.sleep(3)
             print("Unfortunately, you lost 13 minutes of time.")
@@ -540,7 +532,22 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                     break
                 else:
                     print("Try again.")
-                print("Now, empty the clear container.") #To be worked on...
+                print("Now, empty the clear container.") 
+                print("Options: \n 1. Clear Tube \n 2. White Tube")
+                while True:
+                    act4c = input('Input: ')
+                    if act4c == '1':
+                        print("Task Completed!")
+                        time.sleep(1)
+                    else:
+                        print('Try Again.')
+                    time.sleep(1)
+                print('(Screwing the bolts...)')
+                time.sleep(2)
+                print('(Turning on the switch...)')
+                time.sleep(1)
+                print('Complete!')
+                time.sleep(1)
         elif oRecFound == True and oRepair == False: #Installing the recycler
             print("Now, disable the oxygen system using the control panel.")
             time.sleep(1)
@@ -588,6 +595,11 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                     oMins -= 1
             oTime = f"{oMins} minutes"
             print(f"You have {oTime} left.")
+            if oMins == 0:
+                onedeath = True
+                print('You ran out of oxygen. The End.')
+            else:
+                onedeath = False
             if onedeath == False:
                 time.sleep(1)
                 print("Now, you need to attach the new recycler on.")
@@ -599,8 +611,6 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
                 print("Done! You can breathe easier now.")
             else:
                 onedeath = True
-        elif oRepair == False and onedeath == False:
-            print("test")
         else:
             print("")
     else:
@@ -609,6 +619,10 @@ if dest == "1": #THE MOOOON "‾" <- Use for images
         score += 1
         title("DAY 5", "              ")
         subtitle('The Final Day', '        ')
+        time.sleep(2)
+        print('Before leaving, NASA has asked you to find some samples of the lunar surface.')
+        time.sleep(3)
+        print('You only have enough room for five samples, so get some samples that will impress NASA.') #To Be Continued...
     else:
         print("")
     if onedeath == True:
@@ -725,10 +739,70 @@ elif dest == "2": #MARS
         energy = 100
         print(f'You are {energy}% energized')
         time.sleep(5)
-        title("WEEK TWO", "           ")
+        title("WEEK TWO", "           ") #Week Two
         time.sleep(0.5)
-        subtitle('Navigation Tutorial', '       ') #To Be continued...
-
+        subtitle('Navigation Tutorial', '       ') #Mars Tutorial: Navigation
+        time.sleep(1)
+        print('It\'s about time you get used to navigating the ship.')
+        time.sleep(1)
+        print('To stay within the path set to get to Mars, you will need to constantly make changes as to direction and speed.')
+        time.sleep(2)
+        print('Remember the navigation room? we\'ll be going in there again.')
+        time.sleep(1)
+        print(f'To properly navigate the {ship_name}, you\'ll need to use the navigation panel.')
+        time.sleep(2)
+        print('Today, you will learn how to use the navigation panel.')
+        time.sleep(2)
+        print('(Loading the navigation system...)')
+        time.sleep(1)
+        print('_________________________________________')
+        print(' Control >> Navigation >> Tutorial       ')
+        print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+        time.sleep(1)
+        print('What would you like to do?')
+        while True:
+            navcoords = False
+            navtraj = True
+            navCours = True
+            print('Commands:')
+            if navcoords == False:
+                print(' 1. Check coordinates <- Use This!')
+            else:
+                print(' 1. Check coordinates')
+            if navtraj == False:
+                print(' 2. Check trajectory <- Use This!')
+            else:
+                print(' 2. Check trajectory')
+            if navCours == False:
+                print(' 3. Realign <- Use This!')
+            else:
+                print(' 3. Realign')
+            tutorNav = input('Input: ')
+            if tutorNav == '1' and navcoords == False:
+                shipx = 1273
+                shipy = 538
+                shipx = 837
+                print('Current coordinates: ')
+                time.sleep(1)
+                print(f'\nX: {shipx}')
+                time.sleep(0.5)
+                print(f'Y: {shipy}')
+                time.sleep(0.5)
+                print(f'Z: {shipz}')
+                time.sleep(1)
+                print('These are you coordinates relative to Earth.')
+                time.sleep(1)
+                print('Misalignment: None')
+                time.sleep(1)
+                print('Keep track of that. If the misalignment is too large, your ship could go off the planned course.')
+                navcoords = True
+                navtraj = False
+            elif tutorNav == '2' and navtraj == False:
+                print('Current path: ')
+            elif tutorNav == '3' and navcoords == False:
+                print('test')
+            else:
+                print('Invalid input. Follow the tutorial.')
         break
 else:
     print("You set off in your spaceship and crashed into an asteroid. The End.")
