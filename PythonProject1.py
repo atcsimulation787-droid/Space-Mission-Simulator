@@ -5,12 +5,12 @@ energy = random.randint(65, 75)
 health = random.randint(85, 100)
 shipHealth = 1000
 def title(txt: str, spaces: str):
-    print("------------------------------------")
+    print("____________________________________")
     print(f"{spaces}{txt}")
-    print("------------------------------------")
+    print("____________________________________")
 def subtitle(text: str, spaces: str):
     print(f"{spaces}{text}                    ")
-    print("------------------------------------")
+    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
 score = 0
 onedeath = False
 title("SPACE MISSION SIMULATOR", "        ") #I ask that all contributors on GitHub use comments to mark what they added.
@@ -864,11 +864,87 @@ elif dest == "2": #MARS
             if navcoords == True and navtraj == True and navcours == True:
                 break
             else:
-                onedeath = False 
+                time.sleep(1)
         print('You finished the navigation tutorial!')
         time.sleep(3)
         title('WEEK THREE', '         ') #Mars - Week 3: Technology Tutorial 
         subtitle('Technology Tutorial', '      ') # -atcsimulation787-droid
+        time.sleep(1)
+        print('Today, you will learn how to track ship quality, engine status, and repair damaged systems using the command module.')
+        time.sleep(1.5)
+        print('Routinely checking the engine and ship status is important, neglecting a minor failiure could cause the entire ship to become disfunctional.')
+        time.sleep(1)
+        print('(Loading command module...)')
+        time.sleep(2)
+        print('_________________________________________')
+        print(' Control >> Tutorials >> Technology      ')
+        print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+        time.sleep(1)
+        print('What would you like to do first?')
+        task1 = False #Check Ship Status
+        task2 = True #Run Diagnostics
+        task3 = True #Inspect the Engine
+        task4 = True #Repair Technology
+        task5 = True #Check Fuel Status
+        while True:
+            if task1 == False:
+                print(' 1. Check ship status <- Use This!')
+            else:
+                print(' 1. Check Ship Status')
+            time.sleep(0.5)
+            if task2 == False:
+                print(' 2. Run Diagnostics <- Use This!')
+            else:
+                print(' 2. Run Diagnostics')
+            time.sleep(0.5)
+            if task3 == False:
+                print(' 3. Inspect the Engine <- Use This!')
+            else:
+                print(' 3. Inspect the Engine')
+            time.sleep(0.5)
+            if task4 == False:
+                print(' 4. Repair Damaged Technology <- Use This!')
+            else:
+                print(' 4. Repair Damaged Technology')
+            time.sleep(0.5)
+            if task4 == False:
+                print(' 5. Check Fuel Status <- Use This!')
+            else:
+                print(' 5. Check Fuel Status')
+            time.sleep(1)
+            tutorTech = input('Input: ')
+            if tutorTech == '1' and task1 == False:
+                print('Checking ship status...')
+                time.sleep(1)
+                print(f'\nShip status: {ship_health}/1000')
+                if ship_health >= 800:
+                    print('Ship condition: Great')
+                elif ship_health >= 600 and ship_health <= 800:
+                    print('Ship condition: Good')
+                elif ship_health >= 400 and ship_health <= 600:
+                    print('Ship condition: Damaged')
+                elif ship_health >= 200 and ship_health <= 400:
+                    print('Ship condition: Critical')
+                elif ship_health >= 1 and ship_health <= 200:
+                    print('Ship condition: Near Failiure')
+                else:
+                    print('Ship condition: Disabled')
+                time.sleep(2)
+                print('See to it that the ship health doesn\'nt get too low.')
+                time.sleep(0.5)
+                print('Avoid asteroids and space junk.')
+                task1 = True
+                task2 = False
+            elif tutorTech == '2' and task2 == False:
+                print('Running diagnostics on ship...')
+            elif tutorTech == '3' and task3 == False:
+                print('Inspecting the engine...')
+            elif tutorTech == '4' and task4 == False:
+                print('test')
+            elif tutorTech == '5' and task5 == False:
+                print('Checking fuel status...')
+
+            break
 
         break
 else:
