@@ -4,11 +4,11 @@
 3. Will you survive far from home?
 ## What Space Mission Simulator is: 
 1. Space Mission Simulator is a text-based python game similar to a second person book, where you make decisions impacting your survival.
-2. Players will need to keep track of ```health```, ```hunger```, ```energy```, and other things like ```ship_health```
+2. Players will need to keep track of ```health```, ```hunger```, ```energy```, and other things like ```ship_health```.
 3. We hope to give users a similar experience to actually being in space and making choices in real time.
 ## How to use:
-1. To use, import or download the code.
-2. Then, put the code in an IDE (Integrated Developer Environment).
+1. To use, import or download the file PythonProject1.
+2. Then, put the file in an IDE (Integrated Developer Environment).
 3. Finally, run the code and play the game.
 ## DEVELOPER TIPS:
 1. Add your GitHub username near what you added by commenting.
