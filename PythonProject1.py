@@ -865,10 +865,10 @@ elif dest == "2": #MARS
                 break
             else:
                 onedeath = False 
-            print('You finished the navigation tutorial!')
-            time.sleep(3)
-            title('WEEK THREE', '         ') #Mars - Week 3: Technology Tutorial 
-            subtitle('Technology Tutorial', '      ') # -atcsimulation787-droid
+        print('You finished the navigation tutorial!')
+        time.sleep(3)
+        title('WEEK THREE', '         ') #Mars - Week 3: Technology Tutorial 
+        subtitle('Technology Tutorial', '      ') # -atcsimulation787-droid
 
         break
 else:
