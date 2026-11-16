@@ -1,6 +1,7 @@
 # Changelog for Space Mission Simulator:
 ## Version 0.1.6
-- Made starter tutorial and navigation tutorial.
+- Made starter tutorial and navigation tutorial for Mars.
+- Started working on technology tutorial for Mars.
 ## Version 0.1.5
 - Created introduction on Mars.
 - Have finished the majority of version alpha for Moon.
