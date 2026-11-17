@@ -919,13 +919,13 @@ elif dest == "2": #MARS
                 print(f'\nShip status: {ship_health}/1000')
                 if ship_health >= 800:
                     print('Ship condition: Great')
-                elif ship_health >= 600 and ship_health <= 800:
+                elif ship_health >= 600:
                     print('Ship condition: Good')
-                elif ship_health >= 400 and ship_health <= 600:
+                elif ship_health >= 400:
                     print('Ship condition: Damaged')
-                elif ship_health >= 200 and ship_health <= 400:
+                elif ship_health >= 200:
                     print('Ship condition: Critical')
-                elif ship_health >= 1 and ship_health <= 200:
+                elif ship_health >= 1:
                     print('Ship condition: Near Failiure')
                 else:
                     print('Ship condition: Disabled')
@@ -937,10 +937,71 @@ elif dest == "2": #MARS
                 task2 = False
             elif tutorTech == '2' and task2 == False:
                 print('Running diagnostics on ship...')
+                time.sleep(2)
+                print('_________________________________________')
+                print(' Control >> Technology >> Diagnostics    ')
+                print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                time.sleep(2)
+                fuel = 100
+                print(f'SHIP STATUS:           {ship_health}/1000')
+                time.sleep(0.5)
+                print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                time.sleep(1)
+                print('ENGINE STATUS:                     Normal')
+                time.sleep(0.5)
+                print(f'FUEL:                             {fuel}%')
+                time.sleep(0.5)
+                print('LIFE SUPPORT:                      Normal')
+                time.sleep(0.5)
+                print('ELECTRICAL:                 Disfunctional')
+                time.sleep(0.25)
+                print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                time.sleep(1)
+                print('WARNING: Electrical has minor issue')
+                time.sleep(0.5)
+                print('Overall status:          Electrical Issue')
+                time.sleep(1)
+                print('Always remember to check the diagnostics.')
+                print('Seems like you\'ve got an electrical issue. You\'ll learn to fix that soon.')
             elif tutorTech == '3' and task3 == False:
                 print('Inspecting the engine...')
+                time.sleep(2)
+                print('    ENGINE DIAGNOSTICS:')
+                time.sleep(0.25)
+                print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                time.sleep(1)
+                print('TEMPERATURE:                       Normal')
+                time.sleep(0.5)
+                print('ENGINE PRODUCTIVITY:            Excellent')
+                time.sleep(0.5)
+                print('FUEL SUPPLY:                    Sufficent')
+                time.sleep(0.5)
+                print('ENGINE EFFECIENCY:              Excellent')
+                time.sleep(0.25)
+                print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                time.sleep(1)
+                print('Overall Status:                 Excellent')
+                time.sleep(1)
+                print('The engine fuels and powers the ship. It is important to keep track of this at all times.')
+
             elif tutorTech == '4' and task4 == False:
-                print('test')
+                print('_________________________________________')
+                print(' Control >> Technology >> Repairs        ')
+                print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                time.sleep(1)
+                print('Recommeded repairs: ')
+                time.sleep(0.5)
+                print(' 1. Electrical')
+                time.sleep(1)
+                while True:
+                    print('Which repair would you like to do?')
+                    time.sleep(0.5)
+                    tutorTech4a = input('Input: ')
+                    if tutorTech4a == '1':
+                        print('placeholder text')
+                    else:
+                        print('Follow the tutorial.')
+
             elif tutorTech == '5' and task5 == False:
                 print('Checking fuel status...')
 
