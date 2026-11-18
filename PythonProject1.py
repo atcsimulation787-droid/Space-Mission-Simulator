@@ -4,6 +4,7 @@ hunger = random.randint(60, 80)
 energy = random.randint(65, 75)
 health = random.randint(85, 100)
 shipHealth = 1000
+ship_health = shipHealth
 def title(txt: str, spaces: str):
     print("____________________________________")
     print(f"{spaces}{txt}")
@@ -886,10 +887,14 @@ elif dest == "2": #MARS
         task3 = True #Inspect the Engine
         task4 = True #Repair Technology
         task5 = True #Check Fuel Status
+        fuel = 100
         while True:
+            time.sleep(1)
             if task1 == False:
                 print(' 1. Check ship status <- Use This!')
             else:
+                print('What would you like to do next?')
+                time.sleep(1)
                 print(' 1. Check Ship Status')
             time.sleep(0.5)
             if task2 == False:
@@ -907,7 +912,7 @@ elif dest == "2": #MARS
             else:
                 print(' 4. Repair Damaged Technology')
             time.sleep(0.5)
-            if task4 == False:
+            if task5 == False:
                 print(' 5. Check Fuel Status <- Use This!')
             else:
                 print(' 5. Check Fuel Status')
@@ -916,7 +921,7 @@ elif dest == "2": #MARS
             if tutorTech == '1' and task1 == False:
                 print('Checking ship status...')
                 time.sleep(1)
-                print(f'\nShip status: {ship_health}/1000')
+                print(f'\nShip condition: {shipHealth}/1000')
                 if ship_health >= 800:
                     print('Ship condition: Great')
                 elif ship_health >= 600:
@@ -943,7 +948,7 @@ elif dest == "2": #MARS
                 print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
                 time.sleep(2)
                 fuel = 100
-                print(f'SHIP STATUS:           {ship_health}/1000')
+                print(f'SHIP STATUS:           {shipHealth}/1000')
                 time.sleep(0.5)
                 print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
                 time.sleep(1)
@@ -953,7 +958,7 @@ elif dest == "2": #MARS
                 time.sleep(0.5)
                 print('LIFE SUPPORT:                      Normal')
                 time.sleep(0.5)
-                print('ELECTRICAL:                 Disfunctional')
+                print('ELECTRICAL:                 Dysfunctional')
                 time.sleep(0.25)
                 print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
                 time.sleep(1)
@@ -963,6 +968,8 @@ elif dest == "2": #MARS
                 time.sleep(1)
                 print('Always remember to check the diagnostics.')
                 print('Seems like you\'ve got an electrical issue. You\'ll learn to fix that soon.')
+                task2 = True
+                task3 = False
             elif tutorTech == '3' and task3 == False:
                 print('Inspecting the engine...')
                 time.sleep(2)
@@ -974,7 +981,7 @@ elif dest == "2": #MARS
                 time.sleep(0.5)
                 print('ENGINE PRODUCTIVITY:            Excellent')
                 time.sleep(0.5)
-                print('FUEL SUPPLY:                    Sufficent')
+                print('FUEL SUPPLY:                   Sufficient')
                 time.sleep(0.5)
                 print('ENGINE EFFECIENCY:              Excellent')
                 time.sleep(0.25)
@@ -983,6 +990,8 @@ elif dest == "2": #MARS
                 print('Overall Status:                 Excellent')
                 time.sleep(1)
                 print('The engine fuels and powers the ship. It is important to keep track of this at all times.')
+                task3 = True
+                task4 = False
 
             elif tutorTech == '4' and task4 == False:
                 print('_________________________________________')
@@ -998,17 +1007,62 @@ elif dest == "2": #MARS
                     time.sleep(0.5)
                     tutorTech4a = input('Input: ')
                     if tutorTech4a == '1':
-                        print('placeholder text')
+                        print(' Electrical Repair: Advanced Description ')
+                        time.sleep(0.25)
+                        print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                        time.sleep(1)
+                        print('AFFECTED SYSTEM:              Main Wiring')
+                        time.sleep(0.5)
+                        print('PROBLEM:                    Faulty Wiring')
+                        time.sleep(0.5)
+                        print('REPAIR DIFFICULTY:                   Easy')
+                        time.sleep(0.5)
+                        print('ESTIMATED TIME:                10 Minutes')
+                        time.sleep(0.5)
+                        print('REQUIRED SUPPLIES:       Electrical Wires')
+                        time.sleep(0.5)
+                        print('CURRENT STATUS:           Awaiting Repair')
+                        time.sleep(1)
+                        print('Different repairs will take longer time. An engine repair, for example, is more advanced and takes more time then an electrical repair.')
+                        time.sleep(2)
+                        print('Make sure to quickly finish the necessary repairs first, and leave the less important repairs for later.')
+                        break
+
                     else:
-                        print('Follow the tutorial.')
+                        print('To complete the tutorial, follow the instructions.')
+                task4 = True
+                task5 = False
+
+                    
 
             elif tutorTech == '5' and task5 == False:
                 print('Checking fuel status...')
-
-            break
-
+                time.sleep(4)
+                print('_________________________________________')
+                print(' Control >> Technology >> Fuel           ')
+                print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+                time.sleep(1)
+                fuel = 100
+                print('FUEL SYSTEM:                  Operational')
+                time.sleep(0.5)
+                print(f'FUEL TANK:                        {fuel}%')
+                time.sleep(0.5)
+                print('FUEL LINES:                   Operational')
+                time.sleep(0.5)
+                print('FUEL FILTER:                  Operational')
+                time.sleep(0.5)
+                print('FUEL PRESSURE:                     Normal')
+                time.sleep(0.5)
+                print('Expected Percentage:                 100%')
+                time.sleep(1)
+                print('OVERALL STATUS:                 Excellent')
+                time.sleep(2)
+                print('Check your fuel percentage all the time. You need to conserve fuel to reach your destination.')
+                task5 = True
+            else:
+                print('Invalid input. Try again.')
         break
-else:
-    print("You set off in your spaceship and crashed into an asteroid. The End.")
+    else:
+        print("You set off in your spaceship and crashed into an asteroid. The End.")
 time.sleep(3)
 title("Thank you for playing!", "      ")
