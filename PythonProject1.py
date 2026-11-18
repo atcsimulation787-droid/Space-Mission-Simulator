@@ -7,11 +7,11 @@ shipHealth = 1000
 ship_health = shipHealth
 def title(txt: str, spaces: str):
     print("____________________________________")
-    print(f"{spaces}{txt}")
+    print(f"{spaces}{txt}                      ")
     print("____________________________________")
 def subtitle(text: str, spaces: str):
-    print(f"{spaces}{text}                    ")
-    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
+    print(f"{spaces}{text}                     ")
+    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
 score = 0
 onedeath = False
 title("SPACE MISSION SIMULATOR", "        ") #I ask that all contributors on GitHub use comments to mark what they added.
