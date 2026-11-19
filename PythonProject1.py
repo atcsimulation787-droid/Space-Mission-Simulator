@@ -1061,6 +1061,19 @@ elif dest == "2": #MARS
                 task5 = True
             else:
                 print('Invalid input. Try again.')
+        print('Now, you need to fix the lighting.')
+        time.sleep(1)
+        print('Analyzing data... ')
+        time.sleep(1)
+        print('Seems like it could be one of these problems: \n 1. Damaged Wiring \n 2. Loose Connection') #Repairing lighting
+        time.sleep(1)
+        print('Which do you think it is?') #NUMBER ONE IS THE REAL PROBLEMMMMM
+        while True:
+            week3 = input('Input: ')
+            if week3 == '1':
+                print('no ice')
+            else:
+                print('no ice')
         break
     else:
         print("You set off in your spaceship and crashed into an asteroid. The End.")
