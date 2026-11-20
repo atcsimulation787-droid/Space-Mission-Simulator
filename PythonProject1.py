@@ -1071,9 +1071,33 @@ elif dest == "2": #MARS
         while True:
             week3 = input('Input: ')
             if week3 == '1':
-                print('no ice')
+                print('You take a look at all the wires, bu-')
+                time.sleep(0.5)
+                print('Hey, that looks like a damaged wire. Now that you located the problem, you need to fix the damaged wire.')
+                time.sleep(1)
+                print('Now, you need to rewire the damaged cable.')
+                time.sleep(1)
+                print('(Rewiring the cable...)')
+                time.sleep(1)
+                print('Done! Seems like everything is working again... ')
+                time.sleep(1)
+                break
             else:
-                print('no ice')
+                print('You take a look at all of the wires, but find no loose connection.')
+        print('Now that you have finished repairing the wires, you can spend the rest of your day doing these: ')
+        time.sleep(1)
+        print(' 1. Eat a snack')
+        time.sleep(0.5)
+        print(' 2. Read a book')
+        time.sleep(1)
+        week3a = input('Input: ')
+        if week3a == '1':
+            print('You grab a snack from the food closet.')
+        elif week3a == '2':
+            print('You grab a book from one of the closets and start reading.')
+        else:
+            print('You go to bed.')
+
         break
     else:
         print("You set off in your spaceship and crashed into an asteroid. The End.")
