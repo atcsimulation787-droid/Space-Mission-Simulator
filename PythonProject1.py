@@ -1061,6 +1061,10 @@ elif dest == "2": #MARS
                 task5 = True
             else:
                 print('Invalid input. Try again.')
+            if task1 == True and task2 == True and task3 == True and task4 == True and task5 == True:
+                print('Tech tutorial finished! ')
+                time.sleep(1)
+                break
         print('Now, you need to fix the lighting.')
         time.sleep(1)
         print('Analyzing data... ')
