@@ -1090,17 +1090,46 @@ elif dest == "2": #MARS
                 print('You take a look at all of the wires, but find no loose connection.')
         print('Now that you have finished repairing the wires, you can spend the rest of your day doing these: ')
         time.sleep(1)
-        print(' 1. Eat a snack')
+        print(' 1. Take some images of Earth from space')
         time.sleep(0.5)
         print(' 2. Read a book')
+        time.sleep(0.5)
+        print(' 3. Test communications')
         time.sleep(1)
-        week3a = input('Input: ')
-        if week3a == '1':
-            print('You grab a snack from the food closet.')
-        elif week3a == '2':
-            print('You grab a book from one of the closets and start reading.')
+        act3a = input('Input: ')
+        if act3a == '1':
+            print('test')
+        elif act3a == '2':
+            print('You find a good book and start reading.')
+            time.sleep(1)
+        elif act3a == '3':
+            print('(Connecting to Mission Control...)')
+            time.sleep(2)
+            print('_________________________________________')
+            print(' Control >> Communications               ')
+            print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+            time.sleep(1)
+            print('Connection: Stable')
+            time.sleep(0.75)
+            print('Contacting: Mission Control')
+            time.sleep(1)
+            print('‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾')
+            time.sleep(1)
+            print(f'You: {ship_name} to Mission Control, do you copy?')
+            time.sleep(1)
+            print('Mission Control: Yes, we can hear you loud and clear.')
+            time.sleep(1)
+            print('You: Good, I can also hear you just fine.')
+            time.sleep(1)
+            print('Mission Control: Great. Any problems with the ship so far?')
+            time.sleep(1)
+            print('                    OPTIONS:')
+            print('1: None at all. 2. Nope, the ship has not been damaged at all.')
+            print('          3. Nah, the ship is fine.')
+            week3comms = input('Input: ')
         else:
-            print('You go to bed.')
+            print('You take a nap. Energy restored!')
+
 
         break
     else:
