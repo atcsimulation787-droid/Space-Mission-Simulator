@@ -1127,6 +1127,14 @@ elif dest == "2": #MARS
             print('1: None at all. 2. Nope, the ship has not been damaged at all.')
             print('          3. Nah, the ship is fine.')
             week3comms = input('Input: ')
+            if week3comms == '1':
+                print('None at all.')
+            elif week3comms == '2':
+                print('Nope, the ship has not been damaged at all.')
+            else:
+                print('Nah, the ship is fine.')
+            time.sleep(1)
+            print('Mission Control: Great. Is all the technology working as planned?')
         else:
             print('You take a nap. Energy restored!')
 
