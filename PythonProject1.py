@@ -7,10 +7,10 @@ shipHealth = 1000
 ship_health = shipHealth
 def title(txt: str, spaces: str):
     print("____________________________________")
-    print(f"{spaces}{txt}                      ")
+    print(f"\033[1m{spaces}{txt}\033[0m                      ")
     print("____________________________________")
-def subtitle(text: str, spaces: str):
-    print(f"{spaces}{text}                     ")
+def subtitle(txt: str, spaces: str):
+    print(f"\033[1m{spaces}{txt}\033[0m                     ")
     print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
 score = 0
 onedeath = False
